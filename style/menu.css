@@ -1,0 +1,99 @@
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.hidden{          /* classe utilitaire pour cacher un élément */
+  display: none; 
+}
+
+#gameCanvas{
+  border: 2px solid white;
+  background-color: #111;
+  margin-top: 20px;
+}
+
+#gameOver{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 40px;
+  color: #a70707;
+  text-shadow: 2px 2px 0 #000, 4px 4px 0 #ff0000;
+  text-align: center;
+}
+
+.boutons-jeu{
+  padding: 15px 30px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+
+  background: #ffcc00;
+  border: 4px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #000;
+
+  box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffaa00;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.boutons-centre{
+  position : absolute;
+  z-index: 10000000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.boutons-jeu:hover {
+    background: #ffdd33;
+    transform:scale(1.1);
+}
+
+.boutons-centre:hover {
+  background: #ffdd33;
+  transform:translate(-50%, -50%) scale(1.1);
+}
+
+.boutons-joueur{
+  background-color: white;
+  
+}
+
+.clicked{
+  background-color: #ffdd33 !important;
+}
+
+.choix-perso{
+  display: flex;
+  justify-content: center;
+}
+
+#persoBoard caption {
+  caption-side: top;
+}
+
+#scoreBoard {
+  text-align: center;
+}
+
+#scoresTable {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 60%;
+  max-width: 500px;
+}
+#scoresTable th,#scoresTable td {
+  border: 1px solid #ffffff;     /* lignes internes */
+  padding: 8px;
+  text-align: center;
+}
+
+.entete{
+  font-weight: bold;
+  font-size: 20px;
+}

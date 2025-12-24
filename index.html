@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dodge the Blocks</title>
+
+  <link rel="stylesheet" href="style/menu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ================= menu principal ================= -->
+  <div id="menu">
+    <h1>Dodge the Blocks</h1>
+
+    <form id="startForm"> <!-- formulaire pour entrer son pseudo -->
+      <input type="text" id="playerName" placeholder="Entrez votre pseudo" required>
+    </form>
+    
+    <br><br>
+    
+    <div class = "choix-perso">
+      <table id="persoBoard">
+      <caption>Choisissez votre personnage</caption>
+      
+      <tr>  <!-- liste des différents persos -->
+        <th><p>steve</p></th>
+        <th><p>cochon</p></th>
+        <th><p>vache</p></th>
+        <th><p>creeper</p></th>
+      </tr>
+
+      <tr>  <!-- choix du perso via des boutons cliquables -->
+        <th>
+          <button id="steve" class="boutons-joueur">
+            <img src="assets/images/steve.png" width="50" height="50">
+          </button>
+        </th>
+    
+        <th>
+          <button id="cochon" class="boutons-joueur">
+            <img src="assets/images/cochon.png" width="50" height="50">
+          </button>
+        </th>
+
+        <th>
+          <button id="vache" class="boutons-joueur">
+            <img src="assets/images/vache.png" width="50" height="50">
+          </button>
+        </th>
+
+        <th>
+          <button id="creeper" class="boutons-joueur">
+            <img src="assets/images/creeper.png" width="50" height="50">
+          </button>
+        </th>
+      </tr>
+
+      </table>
+    </div>
+
+    <br><br><br> <!-- bouton pour lancer le jeu et afficher le canvas -->
+    <button id="playButton" class="boutons-jeu">Jouer</button>
+
+    <br><br><br> <!-- bouton pour voir le tableau des scores -->
+    <button id="Scores">Voir le classement</button>
+
+    <div id="scoreBoard" class="hidden"> <!-- tableau -->
+      <h2>CLASSEMENT TOP 10</h2>
+      <table id="scoresTable">
+        <thead>
+          <tr class="entete">
+            <th>Pseudo</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ================= jeu ================= -->
+  <div id="gameContainer" class="hidden">
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+    <div id="scoreDisplay">Score : 0</div>
+    <p id="gameOver" class="hidden"> GAME OVER </p>
+    <button id="replayButton" class="boutons-jeu boutons-centre hidden">Rejouer</button>
+  </div>
+
+  <!-- ================= scripts ================= -->
+  <script src="js/joueur.js"></script>
+  <script src="js/obstacle.js"></script>
+  <script src="js/jeu.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/outils.js"></script>
+
+</body>
+</html>
