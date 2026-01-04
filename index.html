@@ -6,11 +6,11 @@
 
   <title>Dodge the Blocks</title>
 
-  <link rel="stylesheet" href="style/menu.css">
+  <link rel="stylesheet" href="style/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="menu-bg">
   <!-- ================= menu principal ================= -->
   <div id="menu">
     <h1>Dodge the Blocks</h1>
@@ -84,10 +84,20 @@
 
   <!-- ================= jeu ================= -->
   <div id="gameContainer" class="hidden">
+    
     <canvas id="gameCanvas" width="400" height="600"></canvas>
+    
     <div id="scoreDisplay">Score : 0</div>
+
+    <div id="mobileControls">
+      <button id="leftBtn">◀</button>
+      <button id="rightBtn">▶</button>
+    </div>
+
     <p id="gameOver" class="hidden"> GAME OVER </p>
+    
     <button id="replayButton" class="boutons-jeu boutons-centre hidden">Rejouer</button>
+  
   </div>
 
   <!-- ================= scripts ================= -->
