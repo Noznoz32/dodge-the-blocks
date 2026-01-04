@@ -83,8 +83,11 @@ function updateGame() {
   }
 
   // mise à jour des obstacles + collision
+  const scaleX = canvas.width / canvas.clientWidth;
+  const scaleY = canvas.height / canvas.clientHeight;
+
   obstacles.forEach(o => {
-    o.update();
+    o.y += o.speed * scaleY;
     o.draw(ctx);
 
     if (checkCollision(joueur, o) && !gameOver) {
