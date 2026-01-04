@@ -135,6 +135,6 @@ body.menu-bg {
   }
 
   #mobileControls {
-    display: flex;
+    display: flex !important;
   }
 }
